@@ -12,4 +12,5 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> { 
 
     public Department findByDepartmentName(String departmentName); //convention is findBy+(name of input that we are using to find(in camel case)) ---> findByDepartmentName as we are giving input as departmentName to get all the details back
     public Department findByDepartmentNameIgnoreCase(String departmentName);//same above one but with ignoring name case feature //basically IT/it/It/iT...does not matter all considered same
+    //Here we can directly use the method names given in Spring data JPA doc, if this is not possible ---> use JPQL queries given in Spring data JPA doc by using @Query("copy-paste entire JPQL query"), if this is not possible ---> use native SQL queries using @Query("...")
 }
