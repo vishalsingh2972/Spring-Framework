@@ -1,11 +1,9 @@
-package com.vishalsingh.Springboot.tutorial.Controller;
+package com.vishalsingh.Springboot.tutorial.controller;
 
 import com.vishalsingh.Springboot.tutorial.entity.Department;
-import com.vishalsingh.Springboot.tutorial.repository.DepartmentRepository;
 import com.vishalsingh.Springboot.tutorial.service.DepartmentService;
 import com.vishalsingh.Springboot.tutorial.service.DepartmentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,23 +25,22 @@ public class DepartmentController { //controller for Department entity i.e Depar
         //now after receiving data from user we next need to call the service layer to pass this data and service layer will then call the repository layer to pass the data and then repository layer will interact with the database and make the appropriate changes in the data  as per instructions inputted by the frontend user
 
         //calling the service layer (WRONG CONVENTION)
-//         DepartmentService service = new DepartmentServiceImpl(); //explicitly creating object of service layer class to call/access service layer class //NOT CORRECT way
-                                                                  //WRONG CONVENTION, let spring do all the work as we have already defined @Component and spring already has @Component class objects/beans stored in its container so let spring do the job no need for you to "explicitly" create new objects using new keyword
+//        DepartmentService service = new DepartmentServiceImpl();//explicitly creating object of service layer class to call/access service layer class //NOT CORRECT way
+//                                                                  //WRONG CONVENTION, let spring do all the work as we have already defined @Component and spring already has @Component class objects/beans stored in its container so let spring do the job no need for you to "explicitly" create new objects using new keyword
 
         return departmentService.saveDepartment(department);
-
     }
 
     //get all from database
     @GetMapping("/departments") //GET method is used to retrieve or fetch data from the database
-    public List<Department> fetchDepartmentList(){
+        public List<Department> fetchDepartmentList(){
         return departmentService.fetchDepartmentList();
     }
 
     //get all from database by using id  //here we are passing id as input
     @GetMapping("/departments/{id}") //id is the value that I will be sending for which I want to get the whole data back, like I will send id (suppose departmentId=1) as input and should get other details like departmentName, departmentAddress,departmentCode...back for that particular id value that I have inputted (i.e here departmentId=1) // {id} is a path variable which means that its value is dynamic and can be different each time you access the database, basically every/each time we can enter/input different id values and in return every/each time we will get access to the details of that particular id
     public Department fetchDepartmentById(@PathVariable("id") Long departmentId){
-        return departmentService.fetchDepartmentBtId(departmentId);
+        return departmentService.fetchDepartmentById(departmentId);
     }
 
     //delete data from database        //here we are passing id as input
@@ -64,5 +61,4 @@ public class DepartmentController { //controller for Department entity i.e Depar
     public Department fetchDepartmentByName(@PathVariable("name") String departmentName){
         return departmentService.fetchDepartmentByName(departmentName);
     }
-
 }
