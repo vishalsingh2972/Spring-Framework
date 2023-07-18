@@ -1,4 +1,4 @@
-package com.vishalsingh.Springboot.tutorial.controller;
+package com.vishalsingh.Springboot.tutorial.Controller;
 
 import com.vishalsingh.Springboot.tutorial.entity.Department;
 import com.vishalsingh.Springboot.tutorial.service.DepartmentService;
