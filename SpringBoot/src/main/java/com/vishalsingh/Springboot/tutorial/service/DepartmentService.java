@@ -4,7 +4,7 @@ import com.vishalsingh.Springboot.tutorial.entity.Department;
 
 import java.util.List;
 
-public interface DepartmentService { //interface DepartmentService can have multiple implementations in various classes, one of the implementations being in the DepartmentServiceImpl.java class
+public interface DepartmentService { //interface DepartmentService can have multiple implementations in various classes, for example one of the implementations here being in the DepartmentServiceImpl.java class
     Department saveDepartment(Department department);
 
     public List<Department> fetchDepartmentList();

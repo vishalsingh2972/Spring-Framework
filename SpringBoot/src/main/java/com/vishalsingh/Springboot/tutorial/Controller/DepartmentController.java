@@ -1,8 +1,7 @@
-package com.vishalsingh.Springboot.tutorial.Controller;
+package com.vishalsingh.Springboot.tutorial.controller;
 
 import com.vishalsingh.Springboot.tutorial.entity.Department;
 import com.vishalsingh.Springboot.tutorial.service.DepartmentService;
-import com.vishalsingh.Springboot.tutorial.service.DepartmentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,0 +1,1 @@
+Why @Service for class in service layer but @Repository for interface in repository layer?

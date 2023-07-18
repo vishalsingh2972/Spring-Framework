@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Service //when we use the @Service annotation, it means that the class is designed to perform a specific service or task, and that it should be managed by Spring so that we can easily use it in our application //For example, imagine you have a class called "EmailService" that sends emails. If you mark this class with the @Service annotation, it means that Spring will manage it for you, and you can easily use it in other parts of your code whenever you need to send an email
-         //also right click ---> it has @Component, so which means it will be or is in the springs radar, so whenever the application starts, for all these @Component classes objects will be created and added to our spring container, so whenever we want we can use this class directly without need for creating objects in order to access the class. Once a class is in the Spring container, it can be accessed and used throughout the application without the need for manual instantiation
+         //also right click ---> it has @Component, so which means it will be or is in the springs radar, so whenever the application starts, for all these @Component classes objects will be created and added to our spring container, so whenever we want we can use this class directly without need for us to create objects each time in order to access the class. Once a class is in the Spring container, it can be accessed and used throughout the application without the need for manual instantiation
 public class DepartmentServiceImpl implements DepartmentService{
 
     @Autowired
