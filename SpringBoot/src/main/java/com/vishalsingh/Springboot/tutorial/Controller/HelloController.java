@@ -1,4 +1,4 @@
-package com.vishalsingh.Springboot.tutorial.controller;
+package com.vishalsingh.Springboot.tutorial.Controller;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -20,7 +20,7 @@ public class HelloController {
                                                                //similarly for POST we can simply put just @PostMapping, for DELETE just @DeleteMapping, for PUT just @PutMapping etc instead of putting @RequestMapping(value = "/", method = RequestMethod.POST) or @RequestMapping(value = "/", method = RequestMethod.DELETE) or @RequestMapping(value = "/", method = RequestMethod.PUT) etc respectively
     @GetMapping("/") //right click ---> it has @RequestMapping(method = RequestMethod.GET) inside of it //will be running at localhost:8082/ or simply localhost:8082
     public String HelloWorld(){   //so here method HelloWorld() can be considered as an endpoint
-        return "*Welcome Vishal Singh Panwar*";  //whenever I hit the endpoint HelloWorld() it gets executed and returns "Welcome Vishal Singh"
+        return "*Welcome Vishal Singh*";  //whenever I hit the endpoint HelloWorld() it gets executed and returns "Welcome Vishal Singh"
     }
 
 
