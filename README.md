@@ -1,4 +1,4 @@
-# Spring Official Documentations
+# Spring Official Documentations (Updated Automatically)
 
 [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/)
 
